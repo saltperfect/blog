@@ -1,1 +1,5 @@
 
+[submodule "saltperfectblog/public"]
+	path = saltperfectblog/public
+	url = git@github.com:saltperfect/saltperfect.github.io.git
+	branch = master
