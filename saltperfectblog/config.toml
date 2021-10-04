@@ -1,4 +1,4 @@
-baseURL = "http://saltperfect.github.io/"
+baseURL = "https://saltperfect.github.io/"
 languageCode = "en-us"
 title = "salt and pepper"
 theme = "hugo_theme_pickles"
