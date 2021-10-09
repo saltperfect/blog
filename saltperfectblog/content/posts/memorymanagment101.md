@@ -1,5 +1,5 @@
 ---
-title: "Memory management 101"
+title: "Memory Management done right!"
 date: 2021-10-06T19:27:02+05:30
 ---
 
