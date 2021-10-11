@@ -50,7 +50,7 @@ func handleConnection(conn net.Conn) {
 ```
 `net.Listen` returns a listener which can accept multiple connections
 
-for each connection we can handleConnection in a separate goroutine. If you notice our handleConnection runs in a infinite loop and never exists. This is done to enable listening on the connection indefinitely. 
+for each connection we can handleConnection in a separate goroutine. If you notice our handleConnection runs in a infinite loop and never exits. This is done to enable listening on the connection indefinitely. 
 
 `conn.Read` is a blocking call and will wait until something is written on the connection.
 
@@ -100,4 +100,4 @@ func main() {
 
 again our whole logic is wrapped around a infinite loop so we are able to send and receive message until the application crashes.
 
-You can find the complete code [here](https://gist.github.com/saltperfect/fb6d7a313aefc163ba27ac3790a0bbd0.js")
+You can find the complete code [here](https://gist.github.com/saltperfect/fb6d7a313aefc163ba27ac3790a0bbd0)
