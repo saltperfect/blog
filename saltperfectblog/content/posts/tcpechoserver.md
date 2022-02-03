@@ -32,6 +32,7 @@ func main() {
 }
 
 func handleConnection(conn net.Conn) {
+	defer conn.Close()
 	for {
 		messages := make([]byte, 128)
 		n, read_err := conn.Read(messages)
