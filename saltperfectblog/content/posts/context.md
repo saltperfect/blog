@@ -4,10 +4,11 @@ date: 2022-02-03T12:42:52+05:30
 draft: true
 ---
 
-The context package in go provides a path to cancel and propagate cancelling information around the methods and even across http methods
+The context package in go provides a path to cancel and propagate cancelling information around the methods and even across http servers.
 
-This comes in quite handy for servers to identify if a client has dropped the connection. This would make the server's efficient by using
-a lot less of the resources.
+Consider you request your server with some information but want to cancel that request halfway, or maybe somehow the connection get drops. The ability to propagate that information to server and trigger cancellation of that request will save you lot of computations.
+
+The below code is in example implementation of exactly this.
 
 # Server Code
 
@@ -95,4 +96,4 @@ By calling cancel we quickly getting the response back from server without the 5
 
 Context package gives the ability to pass values in the context as well.
 
-Rule of thumb while passing values, the value should have the impact on how the program behaves. A good example could be passing uuid's, request'ids
+Rule of thumb while passing values, the value should have the impact on how the program behaves. A good example could be passing uuid's, request'ids.
